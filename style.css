@@ -1019,3 +1019,195 @@ button:focus-visible {
         font-size: 14px
     }
 }
+
+/* Responsive text and intrinsic-size safeguards */
+.hero-layout>*,
+.about>*,
+.details>*,
+.care-grid>*,
+.gallery-grid>*,
+.hero-pet>*,
+.contact .button span {
+    min-width: 0
+}
+
+img,
+video {
+    max-width: 100%
+}
+
+h1,
+h2,
+h3,
+p,
+.button,
+.text-link {
+    overflow-wrap: break-word
+}
+
+.button {
+    max-width: 100%;
+    white-space: normal
+}
+
+@media(max-width:900px) and (min-width:701px) {
+    h1 {
+        font-size: clamp(48px, 7.2vw, 65px);
+        white-space: normal
+    }
+
+    .hero-bottom {
+        flex-wrap: wrap
+    }
+
+    .hero-pet {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr)
+    }
+
+    .hero-pet>span {
+        padding: 18px;
+        font-size: 25px
+    }
+}
+
+@media(max-width:700px) {
+    h1 {
+        font-size: clamp(44px, 10.5vw, 64px);
+        line-height: 1.13;
+        letter-spacing: -1.5px
+    }
+
+    h2 {
+        font-size: clamp(32px, 8.8vw, 43px);
+        line-height: 1.2;
+        letter-spacing: -.8px
+    }
+
+    .contact h2 {
+        font-size: clamp(38px, 10.6vw, 57px);
+        line-height: 1.18;
+        letter-spacing: -1px
+    }
+
+    .hero-pet {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        min-height: 220px
+    }
+
+    .hero-pet>span {
+        font-size: clamp(21px, 5.6vw, 30px);
+        padding: clamp(12px, 3.2vw, 20px);
+        line-height: 1.45
+    }
+
+    .hero-pet img {
+        height: 100%;
+        min-height: 220px;
+        object-position: 50% 65%
+    }
+
+    .hero-bottom {
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        font-size: 12px
+    }
+
+    .hero-intro .button {
+        width: 100%;
+        font-size: 14px;
+        padding: 14px 16px
+    }
+
+    .hero-portrait {
+        height: clamp(340px, 118vw, 470px)
+    }
+
+    .contact .button strong {
+        font-size: 14px;
+        line-height: 1.5
+    }
+
+    .contact .button small {
+        font-size: 13px
+    }
+
+    .contact .button {
+        gap: 12px;
+        padding: 16px
+    }
+
+    .contact-icon {
+        width: 26px;
+        height: 26px
+    }
+
+    header {
+        gap: 12px
+    }
+
+    .brand {
+        min-width: 0
+    }
+
+    .brand span {
+        font-size: clamp(16px, 4.6vw, 18px)
+    }
+
+    #menu {
+        flex-shrink: 0
+    }
+
+    .section-heading p,
+    .care-grid p {
+        font-size: 16px;
+        line-height: 1.7
+    }
+
+    .text-link {
+        font-size: 14px
+    }
+
+    .hero-top {
+        flex-wrap: wrap
+    }
+
+    .hero-top .eyebrow {
+        max-width: 100%;
+        font-size: 10px
+    }
+
+    .hero-location {
+        font-size: 12px
+    }
+
+    nav {
+        top: 100%;
+        font-size: 16px
+    }
+}
+
+@media(max-width:380px) {
+    .care-grid {
+        grid-template-columns: 1fr
+    }
+
+    .care-grid article,
+    .care-grid article:first-child,
+    .care-grid article:nth-child(2),
+    .care-grid article:nth-child(3) {
+        padding: 22px 0 0;
+        border-right: 0
+    }
+
+    .gallery-grid {
+        grid-auto-rows: 160px
+    }
+
+    .brand img {
+        width: 46px
+    }
+
+    .brand {
+        gap: 8px
+    }
+}
